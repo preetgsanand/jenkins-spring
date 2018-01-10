@@ -51,6 +51,18 @@
     </dependencies>
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <url>http://localhost:8080/manager/text</url>
+                    <server>tomcatserver</server>
+                    <path>/spring-boot-web-thymeleaf</path>
+                    <username>admin</username>
+                    <password>admin</password>
+                </configuration>
+            </plugin>
             <!-- Package as an executable jar/war -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
